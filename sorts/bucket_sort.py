@@ -6,7 +6,7 @@ DEFAULT_BUCKECT_SIZE = 5
 
 def bucket_sort(collection, bucket_size=DEFAULT_BUCKECT_SIZE):
     if (len(collection) == 0):
-        print('You don\'t have any item in array')
+        return 'You don\'t have any item in array'
 
     minVal = collection[0]
     maxVal = collection[0]
@@ -40,10 +40,5 @@ def bucket_sort(collection, bucket_size=DEFAULT_BUCKECT_SIZE):
 
 
 if __name__ == '__main__':
-    try:
-        raw_input
-    except NameError:
-        raw_input = input
-    user_input = input('Enter numbers separated by a comma:').strip()
-    unsorted = [int(item) for item in user_input.split(',')]
-    print(bucket_sort(unsorted))
+    sortedArray = bucket_sort([12, 23, 4, 5, 3, 2, 12, 81, 56, 95])
+    print(sortedArray)
